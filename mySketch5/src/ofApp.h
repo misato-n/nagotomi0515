@@ -1,6 +1,7 @@
 #pragma once
 
 #include "ofMain.h"
+#include "Rain.h"
 
 class ofApp : public ofBaseApp{
 
@@ -21,4 +22,8 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 		
+		static const int COUNT = 50;
+		Rain mRains[COUNT];
+
+
 };
