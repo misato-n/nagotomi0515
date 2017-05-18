@@ -2,6 +2,8 @@
 
 #include "ofMain.h"
 #include "Rain.h"
+#include "Candy.h"
+
 
 class ofApp : public ofBaseApp{
 
@@ -22,8 +24,11 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 		
-		static const int COUNT = 50;
+		static const int COUNT = 20;
 		Rain mRains[COUNT];
+
+		static const int COUNT2 = 10;
+		Candy mCandys[COUNT2];
 
 
 };

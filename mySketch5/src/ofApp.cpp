@@ -28,7 +28,7 @@ void ofApp::draw(){
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
 	if (key == 'c') {
-	
+		mCandys[COUNT2].draw();
 	}
 	}
 
