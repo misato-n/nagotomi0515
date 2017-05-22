@@ -9,17 +9,22 @@ class Rain
 {
 public:
 	void setup();
-	void update();
+	void update(bool isKeyPressed);
+	void updateKeyPressed();
+	void keyReleased();
+
 	void draw();
+
+	float x;
 
 	ofVec2f mPosition;
 	ofVec2f mVelocity;
-	//ofColor mColor;
-	float x;
+	ofColor mColor;
+
 
 	ofImage rain;
 	ofImage bouncingrain;
-
+	ofImage candy;
 
 	constexpr static const float gravity = 0.098;
 	constexpr static const float friction = 0.999;

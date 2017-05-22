@@ -14,7 +14,7 @@ void ofApp::setup(){
 //--------------------------------------------------------------
 void ofApp::update(){
 	for (int i = 0; i < COUNT; i++) {
-		mRains[i].update();
+		mRains[i].update(mIsKeyPressed);
 	}
 }
 
@@ -27,14 +27,12 @@ void ofApp::draw(){
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
-	if (key == 'c') {
-		mCandys[COUNT2].draw();
-	}
+	mIsKeyPressed = true;
 	}
 
 //--------------------------------------------------------------
 void ofApp::keyReleased(int key){
-
+	mIsKeyPressed = false;
 }
 
 //--------------------------------------------------------------

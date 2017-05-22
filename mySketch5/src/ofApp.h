@@ -23,12 +23,10 @@ class ofApp : public ofBaseApp{
 		void windowResized(int w, int h);
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
-		
+		bool mIsKeyPressed;
+
 		static const int COUNT = 20;
 		Rain mRains[COUNT];
-
-		static const int COUNT2 = 10;
-		Candy mCandys[COUNT2];
 
 
 };
