@@ -7,14 +7,12 @@ void Rain::setup()
 	rain.load("image/rain.png");
 
 	x = ofRandom(ofGetWidth(), 0);
-	float y = 0;
+	y = 0;
 	mPosition = ofVec2f(x, y);
 
 	float vx = 0;
 	float vy = ofRandom(1, 3);
 	mVelocity = ofVec2f(0, vy);
-
-	//mColor = ofColor(r,g,b);
 
 }
 
@@ -25,9 +23,6 @@ void Rain::update(bool isKeyPressed)
 	if (mPosition.y >= ofGetHeight()) {
 		bouncingrain.load("image/bouncingrain.png");
 
-		if (mPosition.y == ofGetHeight() - 100) {
-			bouncingrain.resize(0, 0);
-		}
 	}
 
 	mPosition += mVelocity;
@@ -40,17 +35,12 @@ void Rain::update(bool isKeyPressed)
 		float b = 255;
 
 		mColor = ofColor::fromHsb(h, s, b);
-		candy.load("image/candy.png");
+		rain.load("image/candy.png");
 
-		mPosition += mVelocity;
-		mVelocity.y += gravity;
-		mVelocity.y *= friction;
 
-		rain.resize(0, 0);
-		bouncingrain.resize(0, 0);
+		for (y; y == ofGetHeight() - 50; y * 0) {
+			//mPosition(x,y);
 
-		if (mPosition.y == ofGetHeight()-50) {
-			mVelocity.y *= 0;
 		}
 	}
 
@@ -58,23 +48,27 @@ void Rain::update(bool isKeyPressed)
 
 
 
-void Rain::draw()
-{
-	ofSetColor(mColor);
+	void Rain::draw()
+	{
+		ofSetColor(mColor);
 
-	rain.draw(mPosition, 50, 50);
-	bouncingrain.draw(x, ofGetHeight() - 100, 110, 110);
-	candy.draw(mPosition, 70, 50);
-	rain.draw(mPosition, 0, 0);
-	bouncingrain.draw(x, ofGetHeight() - 100, 0, 0);
-	candy.draw(mPosition, 0, 0);
-}
+		rain.draw(mPosition, 50, 50);
+		bouncingrain.draw(x, ofGetHeight() - 100, 110, 110);
+
+	}
+
 
 
 
 void Rain::keyReleased() {
-	rain.resize(50, 50);
-	bouncingrain.resize(110, 110);
-	candy.resize(0, 0);
+	mColor = ofColor(245, 252, 254);
+	rain.load("image/rain.png");
+
+	if (mPosition.y >= ofGetHeight()) {
+		rain.load("image/bouncingrain.png");
+
+		bouncingrain.load("image/bouncingrain.png");
+
+	}
 }
 

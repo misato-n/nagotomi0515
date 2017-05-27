@@ -2,8 +2,6 @@
 
 #include "ofMain.h"
 #include "Rain.h"
-#include "Candy.h"
-
 
 class ofApp : public ofBaseApp{
 
@@ -25,7 +23,7 @@ class ofApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
 		bool mIsKeyPressed;
 
-		static const int COUNT = 20;
+		static const int COUNT = 30;
 		Rain mRains[COUNT];
 
 

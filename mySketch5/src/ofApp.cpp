@@ -9,6 +9,7 @@ void ofApp::setup(){
 	for (int i = 0; i < COUNT; i++) {
 		mRains[i].setup();
 	}
+	mIsKeyPressed = false;
 }
 
 //--------------------------------------------------------------
@@ -33,6 +34,11 @@ void ofApp::keyPressed(int key){
 //--------------------------------------------------------------
 void ofApp::keyReleased(int key){
 	mIsKeyPressed = false;
+
+	for (int i = 0; i < COUNT; i++) {
+		mRains[i].keyReleased();
+	}
+
 }
 
 //--------------------------------------------------------------

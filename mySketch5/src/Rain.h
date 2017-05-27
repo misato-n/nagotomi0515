@@ -16,6 +16,7 @@ public:
 	void draw();
 
 	float x;
+	float y;
 
 	ofVec2f mPosition;
 	ofVec2f mVelocity;
@@ -24,8 +25,7 @@ public:
 
 	ofImage rain;
 	ofImage bouncingrain;
-	ofImage candy;
-
+	
 	constexpr static const float gravity = 0.098;
 	constexpr static const float friction = 0.999;
 
