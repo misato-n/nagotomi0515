@@ -4,6 +4,7 @@
 
 void Rain::setup()
 {
+	cloud.load("image/cloud.png");
 	rain.load("image/rain.png");
 
 	x = ofRandom(ofGetWidth(), 0);
@@ -11,9 +12,10 @@ void Rain::setup()
 	mPosition = ofVec2f(x, y);
 
 	float vx = 0;
-	float vy = ofRandom(1, 3);
+	float vy = ofRandom(1, 8);
 	mVelocity = ofVec2f(0, vy);
 
+	
 }
 
 
@@ -28,13 +30,14 @@ void Rain::update(bool isKeyPressed)
 		mPosition = ofVec2f(x, y);
 
 		float vx = 0;
-		float vy = ofRandom(1, 3);
+		float vy = 0;
 		mVelocity = ofVec2f(0, vy);
 
 		if (mPosition.y == ofGetHeight()) {
 			bouncingrain.resize(0, 0);
 		}
 	}
+		
 
 	mPosition += mVelocity;
 	mVelocity.y += gravity;
@@ -65,7 +68,7 @@ void Rain::update(bool isKeyPressed)
 
 		rain.draw(mPosition, 50, 50);
 		bouncingrain.draw(x, ofGetHeight() - 100, 110, 110);
-
+		cloud.draw(0,0,ofGetWidth(),300);
 	}
 
 

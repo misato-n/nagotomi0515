@@ -25,6 +25,7 @@ public:
 
 	ofImage rain;
 	ofImage bouncingrain;
+	ofImage cloud;
 	
 	constexpr static const float gravity = 0.098;
 	constexpr static const float friction = 0.999;

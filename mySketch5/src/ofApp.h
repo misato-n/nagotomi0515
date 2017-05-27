@@ -23,7 +23,7 @@ class ofApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
 		bool mIsKeyPressed;
 
-		static const int COUNT = 30;
+		static const int COUNT = 40;
 		Rain mRains[COUNT];
 
 
