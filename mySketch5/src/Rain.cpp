@@ -23,6 +23,17 @@ void Rain::update(bool isKeyPressed)
 	if (mPosition.y >= ofGetHeight()) {
 		bouncingrain.load("image/bouncingrain.png");
 
+		x = ofRandom(ofGetWidth(), 0);
+		y = 0;
+		mPosition = ofVec2f(x, y);
+
+		float vx = 0;
+		float vy = ofRandom(1, 3);
+		mVelocity = ofVec2f(0, vy);
+
+		if (mPosition.y == ofGetHeight()) {
+			bouncingrain.resize(0, 0);
+		}
 	}
 
 	mPosition += mVelocity;
