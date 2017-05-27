@@ -12,7 +12,7 @@ void Rain::setup()
 	mPosition = ofVec2f(x, y);
 
 	float vx = 0;
-	float vy = ofRandom(1, 8);
+	float vy = ofRandom(0.01, 25);
 	mVelocity = ofVec2f(0, vy);
 
 	
@@ -23,7 +23,7 @@ void Rain::update(bool isKeyPressed)
 {
 
 	if (mPosition.y >= ofGetHeight()) {
-		bouncingrain.load("image/bouncingrain.png");
+		//bouncingrain.load("image/bouncingrain.png");
 
 		x = ofRandom(ofGetWidth(), 0);
 		y = 0;
@@ -33,10 +33,8 @@ void Rain::update(bool isKeyPressed)
 		float vy = 0;
 		mVelocity = ofVec2f(0, vy);
 
-		if (mPosition.y == ofGetHeight()) {
-			bouncingrain.resize(0, 0);
+		
 		}
-	}
 		
 
 	mPosition += mVelocity;
@@ -68,6 +66,8 @@ void Rain::update(bool isKeyPressed)
 
 		rain.draw(mPosition, 50, 50);
 		bouncingrain.draw(x, ofGetHeight() - 100, 110, 110);
+
+		
 		cloud.draw(0,0,ofGetWidth(),300);
 	}
 
@@ -78,10 +78,13 @@ void Rain::keyReleased() {
 	mColor = ofColor(245, 252, 254);
 	rain.load("image/rain.png");
 
-	if (mPosition.y >= ofGetHeight()) {
-		rain.load("image/bouncingrain.png");
+	cloud.load("image/cloud.png");
 
-		bouncingrain.load("image/bouncingrain.png");
+	if (mPosition.y >= ofGetHeight()) {
+		mColor = ofColor(245, 252, 254);
+		//rain.load("image/bouncingrain.png");
+
+		//bouncingrain.load("image/bouncingrain.png");
 
 	}
 }
