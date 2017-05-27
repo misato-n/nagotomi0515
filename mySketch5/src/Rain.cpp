@@ -50,12 +50,17 @@ void Rain::update(bool isKeyPressed)
 		rain.load("image/candy.png");
 
 
-		for (y; y == ofGetHeight() - 50; y * 0) {
-			//mPosition(x,y);
+	//	ofVec2f array[ofGetWidth() / 50][ofGetHeight() / 50] = {
+	//		{}
+	//	{}
+	//	{}
+	//	{}
+	//	{}
+	//	{}
+	
 
-		}
+	//	}
 	}
-
 }
 
 
@@ -65,10 +70,10 @@ void Rain::update(bool isKeyPressed)
 		ofSetColor(mColor);
 
 		rain.draw(mPosition, 50, 50);
-		bouncingrain.draw(x, ofGetHeight() - 100, 110, 110);
+		//bouncingrain.draw(x, ofGetHeight() - 100, 110, 110);
 
 		
-		cloud.draw(0,0,ofGetWidth(),300);
+		cloud.draw(0,0,ofGetWidth(),350);
 	}
 
 
