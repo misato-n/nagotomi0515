@@ -12,7 +12,7 @@ void Rain::setup()
 	mPosition = ofVec2f(x, y);
 
 	float vx = 0;
-	float vy = ofRandom(0.01, 25);
+	float vy = ofRandom(0.0001, 40);
 	mVelocity = ofVec2f(0, vy);
 
 	
@@ -33,7 +33,6 @@ void Rain::update(bool isKeyPressed)
 		float vy = 0;
 		mVelocity = ofVec2f(0, vy);
 
-		
 		}
 		
 
@@ -49,19 +48,105 @@ void Rain::update(bool isKeyPressed)
 		mColor = ofColor::fromHsb(h, s, b);
 		rain.load("image/candy.png");
 
+		//if (mPosition.y=ofGetHeight()-50) {
+		//	mVelocity == ofVec2f(0,0);
+		//}
 
-	//	ofVec2f array[ofGetWidth() / 50][ofGetHeight() / 50] = {
-	//		{}
-	//	{}
-	//	{}
-	//	{}
-	//	{}
-	//	{}
+
+
+
+
+
+
+		/*for (i = 0; i <16 ; i++) {
+			if (mArray[1][i] = false) {
+				x = i;
+			}
+		}
+		for (i = 0; i < 16; i++) {
+			if(mArray[2][i] = false){
+			     x = i;
+		}
+		}
+		for (i = 0; i < 16; i++) {
+			if (mArray[3][i] = false) {
+				x = i;
+			}
+		}
+		for (i = 0; i < 16; i++) {
+			if (mArray[4][i] = false) {
+				x = i;
+			}
+		}
+		for (i = 0; i < 16; i++) {
+			if (mArray[5][i] = false) {
+				x = i;
+			}
+		}
+		for (i = 0; i < 16; i++) {
+			if (mArray[6][i] = false) {
+				x = i;
+			}
+		}
+		for (i = 0; i < 16; i++) {
+			if (mArray[7][i] = false){
+				x = i;
+		    }
+		}
+		for (i = 0; i < 16; i++) {
+			if (mArray[8][i] = false) {
+				x = i;
+			}
+		}
+		for (i = 0; i < 16; i++) {
+			if (mArray[9][i] = false) {
+				x = i;
+			}
+		}
+		for (i = 0; i < 16; i++) {
+			if (mArray[10][i] = false) {
+				x = i;
+			}
+		}
+		for (i = 0; i < 16; i++) {
+			if (mArray[11][i] = false) {
+				x = i;
+			}
+		}
+		for (i = 0; i < 16; i++) {
+			if (mArray[12][i] = false) {
+				x = i;
+			}
+		}
+		for (i = 0; i < 16; i++) {
+			if (mArray[13][i] = false) {
+				x = i;
+			}
+		}
+		for (i = 0; i < 16; i++) {
+			if (mArray[14][i] = false) {
+				x = i;
+			}
+		}
+		for (i = 0; i < 16; i++) {
+			if (mArray[15][i] = false) {
+				x = i;
+			}
+		}
+		for (i = 0; i < 16; i++) {
+			if (mArray[16][i] = false) {
+				x = i;
+			}
+		}
+			
+		
+		if (i==16) {
+			mArray[16][16] = true;
+			mVelocity == ofVec2f(0,0);
+		}*/
+		}
 	
-
-	//	}
 	}
-}
 
 
 
